@@ -1,0 +1,11 @@
+.container{
+    height: 100%;
+    width: 60%;
+    background-color: cadetblue;
+    position: absolute;
+    right: -60%;
+    transition: all .5s ease-in-out;
+}
+
+.showBar{right: 0;}
+.hideBar{right: -60%;}

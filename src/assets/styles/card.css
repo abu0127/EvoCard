@@ -1,0 +1,12 @@
+.cards{
+    display: flex;
+    flex-direction: column;
+    padding: 13% 1% 0 1%;
+}
+.cards .card{
+    height: 93vh;
+    margin: 5px 0;
+    background-color: aquamarine;
+    scroll-snap-align: start;
+    border-radius: 20px;
+}
