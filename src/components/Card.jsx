@@ -8,28 +8,30 @@ function Card() {
 
     useEffect(() => {
         setData(taklifnomalar);
-        setTimeout(()=> setLoading(false) ,1000)
-        
+        setTimeout(() => setLoading(false), 1000)
+
     }, []);
 
     return (
         <div className="cards">
-          
-                {loading ? (
-                    <p>Yuklanmoqda...</p>
-                ) : (
-                    data.map((d) => (
-                        <div className="card" key={d.id}>
+
+            {loading ? (
+                <p>Yuklanmoqda...</p>
+            ) : (
+                data.map((d) => (
+                    <div className="card" key={d.id}>
+                        <div className="card-frame">
                             <h1>{d.title}</h1>
                             <p>{d.description}</p>
                             <a href={d.url} target="_blank" rel="noopener noreferrer">
                                 Ko'rish
                             </a>
                         </div>
-                    ))
-                )}
-            </div>
-     
+                    </div>
+                ))
+            )}
+        </div>
+
     )
 }
 

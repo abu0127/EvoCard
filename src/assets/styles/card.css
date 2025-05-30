@@ -4,9 +4,17 @@
     padding: 13% 1% 0 1%;
 }
 .cards .card{
-    height: 93vh;
-    margin: 5px 0;
-    background-color: aquamarine;
+    height: 100lvh;
     scroll-snap-align: start;
+    display: flex;
+    align-items: flex-end;
+    padding-bottom: 5%;
+    justify-content: center;
+}
+
+.card-frame{
+    height: 92%;
+    width: 99%;
+    background-color: antiquewhite;
     border-radius: 20px;
 }
