@@ -1,6 +1,9 @@
 import React, { useEffect, useState } from 'react'
 import { taklifnomalar } from '../data/taklifnomalar'
+import { FaShareAlt } from 'react-icons/fa';
+import { BiFullscreen } from "react-icons/bi";
 import '../assets/styles/card.css'
+import NativeShareButton from './NativeShareButton'
 
 function Card() {
     const [loading, setLoading] = useState(true)
@@ -22,9 +25,24 @@ function Card() {
                     <div className="card" key={d.id}>
                         <div className="card-frame">
                             <h1>{d.title}</h1>
+                            <iframe width="97%" height="80%"
+                                src={d.url}
+                                loading="lazy"
+                                frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen>
+                            </iframe>
+
+                             <div className="ditals">
+                                <div className="price">{d.price}</div>
+                                <div className="visite">
+                                   <NativeShareButton url={d.url} />
+                                </div>
+                             </div>
+
                             <p>{d.description}</p>
                             <a href={d.url} target="_blank" rel="noopener noreferrer">
-                                Ko'rish
+                                <BiFullscreen />
                             </a>
                         </div>
                     </div>
