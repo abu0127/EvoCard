@@ -1,12 +1,12 @@
+import { FaShareAlt } from 'react-icons/fa';
 
-
-function NativeShareButton({url}) {
+function NativeShareButton({url,  title}) {
   const handleShare = async () => {
     if (navigator.share) {
       try {
         await navigator.share({
           title: "Sayt nomi",
-          text: "Mana bu saytni ko‘r!",
+          text: title,
           url: url,
         });
         console.log("Ulashildi!");
@@ -19,12 +19,12 @@ function NativeShareButton({url}) {
   };
 
   return (
-    <button
+    <div
       onClick={handleShare}
       className="px-4 py-2 bg-blue-600 text-white rounded"
     >
-      Ulashish
-    </button>
+      <FaShareAlt/>
+    </div>
   );
 }
 

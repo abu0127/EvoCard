@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { taklifnomalar } from '../data/taklifnomalar'
-import { FaShareAlt } from 'react-icons/fa';
+
 import { BiFullscreen } from "react-icons/bi";
 import '../assets/styles/card.css'
 import NativeShareButton from './NativeShareButton'
@@ -33,17 +33,24 @@ function Card() {
                                 allowfullscreen>
                             </iframe>
 
-                             <div className="ditals">
+                            <div className="ditals">
                                 <div className="price">{d.price}</div>
-                                <div className="visite">
-                                   <NativeShareButton url={d.url} />
-                                </div>
-                             </div>
 
-                            <p>{d.description}</p>
-                            <a href={d.url} target="_blank" rel="noopener noreferrer">
-                                <BiFullscreen />
-                            </a>
+                                <div className='shair'>
+                                    <div className="visite">
+                                        <NativeShareButton url={d.url} title={d.title} />
+                                        
+                                    </div>
+
+                                    <a href={d.url} target="_blank" rel="noopener noreferrer">
+                                        <BiFullscreen />
+                                    </a>
+                                </div>
+
+                            </div>
+
+
+
                         </div>
                     </div>
                 ))
