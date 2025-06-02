@@ -22,7 +22,7 @@ function Card() {
                 data.map((d) => (
                     <div className="card" key={d.id}>
                         <div className="card-frame">
-                            <h1>{d.title}</h1>
+                            <div>{d.title}</div>
                             <iframe width="97%" height="95%"
                                 src={d.url}
                                 loading="lazy"
@@ -36,8 +36,8 @@ function Card() {
 
                                 <div className='shair'>
                                     <div className="visite">
-                                        <NativeShareButton url={d.url} title={d.title} />
-                                        <div>Ulashish</div>
+                                        <NativeShareButton  url={d.url} title={d.title} />
+                                       
                                     </div>
 
                                     <a href={d.url} target="_blank" rel="noopener noreferrer">
