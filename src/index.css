@@ -9,6 +9,8 @@ body {
   line-height: 1.6;
   background-color: #f8f9fa;
   color: #333;
+  height: calc(var(--vh,1vh) * 100);
+  margin: 0;
 }
 
 #root {

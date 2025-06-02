@@ -1,4 +1,4 @@
-import { FaShareAlt } from 'react-icons/fa';
+
 
 function NativeShareButton({url,  title}) {
   const handleShare = async () => {
@@ -23,7 +23,6 @@ function NativeShareButton({url,  title}) {
       onClick={handleShare}
       className="px-4 py-2 bg-blue-600 text-white rounded"
     >
-      <FaShareAlt/>
     </div>
   );
 }

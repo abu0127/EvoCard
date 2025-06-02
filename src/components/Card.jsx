@@ -1,7 +1,5 @@
 import React, { useEffect, useState } from 'react'
 import { taklifnomalar } from '../data/taklifnomalar'
-
-import { BiFullscreen } from "react-icons/bi";
 import '../assets/styles/card.css'
 import NativeShareButton from './NativeShareButton'
 
@@ -25,7 +23,7 @@ function Card() {
                     <div className="card" key={d.id}>
                         <div className="card-frame">
                             <h1>{d.title}</h1>
-                            <iframe width="97%" height="80%"
+                            <iframe width="95%" height="95%"
                                 src={d.url}
                                 loading="lazy"
                                 frameborder="0"
@@ -39,11 +37,11 @@ function Card() {
                                 <div className='shair'>
                                     <div className="visite">
                                         <NativeShareButton url={d.url} title={d.title} />
-                                        
+                                        <div>Ulashish</div>
                                     </div>
 
                                     <a href={d.url} target="_blank" rel="noopener noreferrer">
-                                        <BiFullscreen />
+                                        <div>To'liq ekran</div>
                                     </a>
                                 </div>
 

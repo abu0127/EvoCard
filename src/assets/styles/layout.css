@@ -38,4 +38,6 @@ main {
     height: 100lvh;
     overflow-y: scroll;
     scroll-snap-type: y mandatory;
+    background: url('../../../public/back.PNG');
+    background-size: cover;
 }
