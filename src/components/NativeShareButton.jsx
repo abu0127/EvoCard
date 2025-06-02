@@ -5,8 +5,7 @@ function NativeShareButton({url,  title}) {
     if (navigator.share) {
       try {
         await navigator.share({
-          title: "Sayt nomi",
-          text: title,
+          title: title,
           url: url,
         });
         console.log("Ulashildi!");
