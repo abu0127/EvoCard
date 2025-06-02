@@ -23,7 +23,7 @@ function Card() {
                     <div className="card" key={d.id}>
                         <div className="card-frame">
                             <h1>{d.title}</h1>
-                            <iframe width="95%" height="95%"
+                            <iframe width="97%" height="95%"
                                 src={d.url}
                                 loading="lazy"
                                 frameborder="0"
