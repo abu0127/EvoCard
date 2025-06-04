@@ -20,10 +20,17 @@ export default function Layout() {
                 </div>
                
             </header>
-            <main>
+            <main className='main'>
                 <Bar mobileMenuOpen={mobileMenuOpen} />
                 <Card/>
             </main>
         </>
     )
 }
+
+ const main = document.querySelector('.main')
+      function setFullScrreen(){
+        document.documentElement.style.setProperty('--vh',`${main.innerHeight * 0.01}px`)
+      }
+      main.addEventListener('resize', setFullScrreen);
+      setFullScrreen()

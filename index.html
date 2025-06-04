@@ -9,10 +9,11 @@
   <body>
     <div id="root"></div>
     <script>
+      const main = document.querySelector('.main')
       function setFullScrreen(){
-        document.documentElement.style.setProperty('--vh',`${window.innerHeight * 0.01}px`)
+        document.documentElement.style.setProperty('--vh',`${main.innerHeight * 0.01}px`)
       }
-      window.addEventListener('resize', setFullScrreen);
+      main.addEventListener('resize', setFullScrreen);
       setFullScrreen()
     </script>
     <script type="module" src="/src/main.jsx"></script>

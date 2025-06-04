@@ -48,9 +48,9 @@ iframe {
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 15px;
+    font-size: 20px;
     height: 35px;
-    background-color: rgb(96, 170, 255);
+    background-color: rgb(121, 43, 247);
 }
 .shair a{
     text-decoration:  none;
@@ -65,4 +65,5 @@ iframe {
     background-color: rgba(115, 255, 0, 0.356);
     color: #00b900;
     border-radius: 10px;
+    font-size: 20px;
 }
