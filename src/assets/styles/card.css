@@ -4,7 +4,7 @@
     padding: 13% 1% 0 1%;
 }
 .cards .card{
-    height: 100lvh;
+    height: calc(var(--vh) * 100);
     scroll-snap-align: start;
     display: flex;
     align-items: center;
