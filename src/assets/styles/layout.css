@@ -4,7 +4,7 @@ header {
     justify-content: space-between;
     width: 100%;
     height: 6%;
-    position: fixed;
+    position: sticky;
     top: 0;
     left: 0;
     background: #f8f9fa;
@@ -36,11 +36,14 @@ header .barBtn {
 
 main {
     height: calc(var(--vh, 1vh) * 100);
+    height: 100dvh;
     overflow: auto;
     scroll-snap-type: y mandatory;
 
-    background-size: cover;
 }
+
 :root {
-  --vh: 1vh; /* fallback qiymat */
+    --vh: 1vh;
+    /* fallback qiymat */
 }
+

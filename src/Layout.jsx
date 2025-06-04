@@ -1,5 +1,5 @@
-import { FaSearch, FaBars, FaTimes } from 'react-icons/fa';
-import './assets/styles/layout.css'
+import { FaBars, FaTimes } from 'react-icons/fa';
+import './assets/styles/layout.css';
 import { useState, useEffect, useRef } from 'react';
 import Bar from './components/Bar';
 import Card from './components/Card';
@@ -12,23 +12,28 @@ export default function Layout() {
 
     useEffect(() => {
         const setFullScreen = () => {
-            if (mainRef.current) {
-                const vh = mainRef.current.clientHeight * 0.01;
-                document.documentElement.style.setProperty('--vh', `${vh}px`);
-            }
+            const vh = window.innerHeight * 0.01;
+            document.documentElement.style.setProperty('--vh', `${vh}px`);
         };
 
-        window.addEventListener('resize', setFullScreen);
         setFullScreen(); // Initial call
 
-        return () => window.removeEventListener('resize', setFullScreen); // Cleanup
+        window.addEventListener('resize', setFullScreen);
+        window.addEventListener('orientationchange', setFullScreen);
+        window.addEventListener('scroll', setFullScreen); // Safari uchun kerak
+
+        return () => {
+            window.removeEventListener('resize', setFullScreen);
+            window.removeEventListener('orientationchange', setFullScreen);
+            window.removeEventListener('scroll', setFullScreen);
+        };
     }, []);
 
     return (
         <>
             <header>
                 <div className="inner-header">
-                    <h1>salom</h1>
+                    <h1>EvoInvite</h1>
                     <button onClick={toggleMenu} className='barBtn'>
                         {mobileMenuOpen ? <FaTimes /> : <FaBars />}
                     </button>
