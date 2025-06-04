@@ -35,7 +35,7 @@ header .barBtn {
 }
 
 main {
-
+    position: relative;
     height: 100dvh;
     overflow: auto;
     scroll-snap-type: y mandatory;
