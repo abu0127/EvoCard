@@ -4,7 +4,7 @@ header {
     justify-content: space-between;
     width: 100%;
     height: 6%;
-    position: sticky;
+    position: fixed;
     top: 0;
     left: 0;
     background: #f8f9fa;
@@ -36,8 +36,6 @@ header .barBtn {
 
 main {
     overflow: auto;
-    scroll-snap-type: y mandatory;
-    min-height: calc(var(--vh, 1vh) * 100);
    
 }
 

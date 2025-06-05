@@ -10,7 +10,7 @@ export  const  taklifnomalar = [
     {
       id: 2,
       url: "https://abu0127.github.io/taklifnoma-2.0.0/",
-      title: "Tadbir taklifi",
+      title: "To'y taklifnomasi",
       description: "Biznes seminarimizga taklif etamiz. Xalqaro mutaxassislar bilan uchrashuv.",
       price: "$50",
       category: "tadbir"
@@ -18,7 +18,7 @@ export  const  taklifnomalar = [
     {
       id: 3,
       url: "https://abu0127.github.io/taklifnoma-0.0.4/",
-      title: "Tadbir taklifi",
+      title: "To'y taklifnomasi",
       description: "Biznes seminarimizga taklif etamiz. Xalqaro mutaxassislar bilan uchrashuv.",
       price: "$50",
       category: "tadbir"
@@ -26,10 +26,18 @@ export  const  taklifnomalar = [
     {
       id: 4,
       url: " https://abu0127.github.io/taklifnoma-5/",
-      title: "Tadbir taklifi",
+      title: "To'y taklifnomasi",
       description: "Biznes seminarimizga taklif etamiz. Xalqaro mutaxassislar bilan uchrashuv.",
       price: "$50",
-      category: "tadbir"
+      category: "toy"
     },
    
+    {
+      id: 5,
+      url: " https://abu0127.github.io/yangibozor/",
+      title: "Dukon taklifi",
+      description: "Biznes seminarimizga taklif etamiz. Xalqaro mutaxassislar bilan uchrashuv.",
+      price: "bepul",
+      category: "tadbir"
+    },
   ];
