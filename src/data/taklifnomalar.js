@@ -15,5 +15,21 @@ export  const  taklifnomalar = [
       price: "$50",
       category: "tadbir"
     },
+    {
+      id: 3,
+      url: "https://abu0127.github.io/taklifnoma-0.0.4/",
+      title: "Tadbir taklifi",
+      description: "Biznes seminarimizga taklif etamiz. Xalqaro mutaxassislar bilan uchrashuv.",
+      price: "$50",
+      category: "tadbir"
+    },
+    {
+      id: 4,
+      url: " https://abu0127.github.io/taklifnoma-5/",
+      title: "Tadbir taklifi",
+      description: "Biznes seminarimizga taklif etamiz. Xalqaro mutaxassislar bilan uchrashuv.",
+      price: "$50",
+      category: "tadbir"
+    },
    
   ];

@@ -4,8 +4,7 @@
     padding: 13% 1% 0 1%;
 }
 .cards .card{
-    height: calc(var(--vh) * 100);
-    scroll-snap-align: start;
+    
     display: flex;
     align-items: center;
     padding-bottom: 10%;
@@ -13,7 +12,7 @@
 }
 
 .card-frame{
-    height: 90%;
+    height: 90vh;
     width: 94%;
     border:  1px solid rgb(0, 0, 0, 00.1);
     border-radius: 25px;

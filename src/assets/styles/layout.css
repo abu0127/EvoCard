@@ -35,14 +35,10 @@ header .barBtn {
 }
 
 main {
-    position: relative;
-    height: 100dvh;
     overflow: auto;
     scroll-snap-type: y mandatory;
     min-height: calc(var(--vh, 1vh) * 100);
-    /* dinamik viewport balandligi */
-    height: 100dvh;
-    /* zamonaviy brauzerlar uchun */
+   
 }
 
 :root {
