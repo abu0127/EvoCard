@@ -3,13 +3,18 @@ import './assets/styles/layout.css';
 import { useState, useEffect, useRef } from 'react';
 import Bar from './components/Bar';
 import Card from './components/Card';
+import RightToolPanel from './components/RightToolPanel';
 
 export default function Layout() {
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
     const [searchTerm, setSearchTerm] = useState('');
+    const [showSearchBar, setShowSearchBar] = useState(false);
+    const [toolOpen, setToolOpen] = useState(false);
     const mainRef = useRef(null);
 
     const toggleMenu = () => setMobileMenuOpen(prev => !prev);
+    const toggleSearchBar = () => setShowSearchBar(prev => !prev);
+    const closeSearchBar = () => setShowSearchBar(false); // 👈 Yopish funksiyasi
 
     useEffect(() => {
         const setFullScreen = () => {
@@ -42,27 +47,30 @@ export default function Layout() {
             <header>
                 <div className="inner-header">
                     <div className="logo-container">
-                        {/* Logoni bu yerga qo'yish mumkin */}
+                        {/* Logo */}
+                    </div>
+                    <div className="bar-icons">
+                        <button className="icon-button search-toggle" onClick={toggleSearchBar}>
+                            <FaSearch className='search-icon' />
+                        </button>
+                        <button onClick={() => setToolOpen(true)} className="barBtn">
+                            {mobileMenuOpen ? <FaTimes /> : <FaBars />}
+                        </button>
                     </div>
 
-                    <div className="search-box">
-                        <FaSearch className="search-icon" />
-                        <input
-                            type="text"
-                            placeholder="Qidirish..."
-                            value={searchTerm}
-                            onChange={(e) => setSearchTerm(e.target.value)}
-                        />
-                    </div>
-
-                    <button onClick={toggleMenu} className="barBtn">
-                        {mobileMenuOpen ? <FaTimes /> : <FaBars />}
-                    </button>
                 </div>
             </header>
+            <RightToolPanel open={toolOpen} onClose={() => setToolOpen(false)} />
+
+
+            <Bar
+                search={searchTerm}
+                setSearch={setSearchTerm}
+                show={showSearchBar}
+                onClose={closeSearchBar} // 👈 Barni yopish
+            />
 
             <main className="main" ref={mainRef}>
-                <Bar mobileMenuOpen={mobileMenuOpen} />
                 <Card search={searchTerm} />
             </main>
         </>

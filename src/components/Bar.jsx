@@ -1,12 +1,20 @@
-import '../assets/styles/bar.css'
+import { FaTimes } from 'react-icons/fa';
+import '../assets/styles/bar.css';
 
-export default function Bar({mobileMenuOpen}) {
+export default function Bar({ search, setSearch, show, onClose }) {
     return (
-        <>
-            <article className={mobileMenuOpen ?'container showBar': 'container hideBar' }>
-
-            </article>
-
-        </>
-    )
+        <div className={`search-bar-container ${show ? 'show' : ''}`}>
+            <input
+                type="text"
+                value={search}
+                onChange={(e) => setSearch(e.target.value)}
+                placeholder="Nimani qidiryapsiz?"
+                inputMode="text"
+                autoComplete="off"
+            />
+            <button className="close-btn" onClick={onClose} aria-label="Yopish">
+                <FaTimes />
+            </button>
+        </div>
+    );
 }

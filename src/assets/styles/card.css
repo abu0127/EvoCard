@@ -1,9 +1,7 @@
 .cards {
   display: flex;
   flex-direction: column;
-  gap: 16px;
-  padding: 10px;
-  max-width: 600px;
+  padding: 15px;
   margin: auto;
   padding-top:15% ;
 }
@@ -18,13 +16,14 @@
   box-sizing: border-box;
   border-radius: 15px;
   background: linear-gradient(rgba(240,240,240,0.8), rgba(255,255,255,0.9));
-  box-shadow: 0 2px 10px rgba(0,0,0,0.08);
-  padding: 7px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.158);
+  padding: 5px;
   display: flex;
   flex-direction: column;
   overflow: hidden;
-  height: 100lvh; /* bu muhim */
+  height: 96lvh; /* bu muhim */
   display: flex;
+  margin-top: 10px;
   flex-direction: column;
 }
 
@@ -71,13 +70,16 @@ iframe {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 4px 8px;
-  font-size: 14px;
-  color: #fff;
-  background-color: rgb(121, 43, 247);
+  padding: 4px 10px;
+  font-size: 25px;
+  color: #333;
   border-radius: 8px;
   text-decoration: none;
   transition: background-color 0.3s ease;
+}
+.shair-icon{
+    margin-top: 5px;
+    font-size: 23px;
 }
 
 .shair a:hover {
@@ -221,6 +223,22 @@ iframe {
   transition: background 0.3s ease;
   text-decoration: none;
 }
+.no-results {
+  text-align: center;
+  padding: 40px 20px;
+  color: #888;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  animation: fadeIn 0.4s ease;
+}
+
+.no-results img {
+  width: 180px;
+  max-width: 90%;
+  margin-bottom: 16px;
+}
+
 
 .icon-btn:hover {
   background-color: #692bd1;
