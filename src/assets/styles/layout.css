@@ -54,3 +54,26 @@ main {
     --vh: 1vh;
     /* fallback qiymat */
 }
+.search-box {
+  display: flex;
+  align-items: center;
+  background-color: #f0f0f0;
+  border-radius: 8px;
+  padding: 5px 5px;
+  gap: 5px;
+  margin-right: 10px;
+}
+
+.search-box input {
+  border: none;
+  background: transparent;
+  outline: none;
+  font-size: 14px;
+  width: 80px;
+  
+}
+
+.search-icon {
+  color: #666;
+  font-size: 18px;
+}
