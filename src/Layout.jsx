@@ -4,6 +4,7 @@ import { useState, useEffect, useRef } from 'react';
 import Bar from './components/Bar';
 import Card from './components/Card';
 
+
 export default function Layout() {
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
     const mainRef = useRef(null);
@@ -42,7 +43,9 @@ export default function Layout() {
         <>
             <header>
                 <div className="inner-header">
-                    <h1>EvoInvite</h1>
+                    <div className="logo-container">
+                    </div>
+                    
                     <button onClick={toggleMenu} className="barBtn">
                         {mobileMenuOpen ? <FaTimes /> : <FaBars />}
                     </button>

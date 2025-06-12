@@ -10,8 +10,7 @@ header {
     background: #f8f9fa;
     right: 0;
     z-index: 1000;
-
-}
+    
 
 .inner-header {
     display: flex;
@@ -25,6 +24,8 @@ header {
     padding: 0 3%;
     margin: 0 auto;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    
+}
 }
 
 header .barBtn {
@@ -33,9 +34,19 @@ header .barBtn {
     font-size: 25px;
     color: #333;
 }
+.logo-container{
+    height: 50px;
+    width: 200px;
+    overflow: hidden;
+    background: url('../../../public/IMG_1503.PNG');
+    background-size: cover;
+    background-position: center;
+    
+}
 
 main {
-    overflow: auto;
+    
+    width: 100dvw;
    
 }
 

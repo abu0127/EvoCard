@@ -1,7 +1,7 @@
 .cards{
     display: flex;
     flex-direction: column;
-    padding: 13% 1% 0 1%;
+    padding: 14% 1% 0 1%;
 }
 .cards .card{
     
