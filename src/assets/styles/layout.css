@@ -47,7 +47,7 @@ header .barBtn {
 main {
     
     width: 100dvw;
-   
+    height: 100lvh;
 }
 
 :root {

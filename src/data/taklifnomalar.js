@@ -5,7 +5,9 @@ export  const  taklifnomalar = [
       title: "To'y taklifnomasi",
       description: "Aziz do'stlar, farzandimizning to'y marosimiga taklif etamiz. 2023-yil 15-oktabr soat 18:00",
       price: "Bepul",
-      category: "to'y"
+      category: "to'y",
+      type: 'qizlar',
+     
     },
     {
       id: 2,
